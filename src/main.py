@@ -24,48 +24,48 @@ def handle_invalid_usage(error):
     return jsonify(error.to_dict()), error.status_code
 
 
-#Family Class
-class Family:
-    def __init__(self, last_name):
-        self.last_name = last_name
-        #example list of members
-        self._members = [
-            {
-                "id": self._generateId(),
-                "first_name": "John",
-                "last_name": "Doe",
-                "age": "33",
-                "genre": "Male",
-                "lucky_numbers": "7, 13, 22"
-            },
-            {
-                "id": self._generateId(),
-                "first_name": "John",
-                "last_name": "Doe",
-                "age": "33",
-                "genre": "Male",
-                "lucky_numbers": "7, 13, 22"
-            },
-            {
-                "id": self._generateId(),
-                "first_name": "John",
-                "last_name": "Doe",
-                "age": "33",
-                "genre": "Male",
-                "lucky_numbers": "7, 13, 22"
-            },
-        ]
+# #Family Class
+# class Family:
+#     def __init__(self, last_name):
+#         self.last_name = last_name
+#         #example list of members
+#         self._members = [
+#             {
+#                 "id": self._generateId(),
+#                 "first_name": "John",
+#                 "last_name": "Doe",
+#                 "age": "33",
+#                 "genre": "Male",
+#                 "lucky_numbers": "7, 13, 22"
+#             },
+#             {
+#                 "id": self._generateId(),
+#                 "first_name": "John",
+#                 "last_name": "Doe",
+#                 "age": "33",
+#                 "genre": "Male",
+#                 "lucky_numbers": "7, 13, 22"
+#             },
+#             {
+#                 "id": self._generateId(),
+#                 "first_name": "John",
+#                 "last_name": "Doe",
+#                 "age": "33",
+#                 "genre": "Male",
+#                 "lucky_numbers": "7, 13, 22"
+#             },
+#         ]
 
 
 
 
-# generate sitemap with all your endpoints
-@app.route('/')
-def sitemap():
-    return generate_sitemap(app)
+# # generate sitemap with all your endpoints
+# @app.route('/')
+# def sitemap():
+#     return generate_sitemap(app)
 
-@app.route('/hello', methods=['POST', 'GET'])
-def handle_hello():
+# @app.route('/hello', methods=['POST', 'GET'])
+# def handle_hello():
 
     response_body = {
         "hello": "world"
